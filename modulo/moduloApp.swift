@@ -11,7 +11,7 @@ import SwiftUI
 struct moduloApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreen()
         }
     }
 }

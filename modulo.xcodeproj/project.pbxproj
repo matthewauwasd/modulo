@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2020B46B2A57328000EDA833 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2020B4692A572CB500EDA833 /* DMSans-Bold.ttf */; };
+		2020B46D2A57724000EDA833 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020B46C2A57724000EDA833 /* SplashScreen.swift */; };
 		204A4A4C2A560B0A00160251 /* moduloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204A4A4B2A560B0A00160251 /* moduloApp.swift */; };
 		204A4A4E2A560B0A00160251 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204A4A4D2A560B0A00160251 /* ContentView.swift */; };
 		204A4A502A560B0B00160251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204A4A4F2A560B0B00160251 /* Assets.xcassets */; };
 		204A4A532A560B0B00160251 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204A4A522A560B0B00160251 /* Preview Assets.xcassets */; };
+		208E37C02A5BC54D008AAEB5 /* SimpleCalcTipChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208E37BF2A5BC54D008AAEB5 /* SimpleCalcTipChoiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2020B4692A572CB500EDA833 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		2020B46A2A572D5A00EDA833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2020B46C2A57724000EDA833 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		204A4A482A560B0A00160251 /* modulo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = modulo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		204A4A4B2A560B0A00160251 /* moduloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moduloApp.swift; sourceTree = "<group>"; };
 		204A4A4D2A560B0A00160251 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		204A4A4F2A560B0B00160251 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		204A4A522A560B0B00160251 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		208E37BF2A5BC54D008AAEB5 /* SimpleCalcTipChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCalcTipChoiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2020B4682A572CB500EDA833 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2020B4692A572CB500EDA833 /* DMSans-Bold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		204A4A3F2A560B0A00160251 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +66,12 @@
 		204A4A4A2A560B0A00160251 /* modulo */ = {
 			isa = PBXGroup;
 			children = (
+				2020B46A2A572D5A00EDA833 /* Info.plist */,
 				204A4A4B2A560B0A00160251 /* moduloApp.swift */,
+				2020B46C2A57724000EDA833 /* SplashScreen.swift */,
 				204A4A4D2A560B0A00160251 /* ContentView.swift */,
+				208E37BF2A5BC54D008AAEB5 /* SimpleCalcTipChoiceView.swift */,
+				2020B4682A572CB500EDA833 /* fonts */,
 				204A4A4F2A560B0B00160251 /* Assets.xcassets */,
 				204A4A512A560B0B00160251 /* Preview Content */,
 			);
@@ -125,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2020B46B2A57328000EDA833 /* DMSans-Bold.ttf in Resources */,
 				204A4A532A560B0B00160251 /* Preview Assets.xcassets in Resources */,
 				204A4A502A560B0B00160251 /* Assets.xcassets in Resources */,
 			);
@@ -137,6 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				208E37C02A5BC54D008AAEB5 /* SimpleCalcTipChoiceView.swift in Sources */,
+				2020B46D2A57724000EDA833 /* SplashScreen.swift in Sources */,
 				204A4A4E2A560B0A00160251 /* ContentView.swift in Sources */,
 				204A4A4C2A560B0A00160251 /* moduloApp.swift in Sources */,
 			);
@@ -264,11 +286,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"modulo/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = modulo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -281,6 +306,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = plover.modulo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -292,11 +320,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"modulo/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = modulo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,6 +340,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = plover.modulo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
