@@ -7,39 +7,39 @@
 
 import SwiftUI
 
-struct SimpleCalcTipChoiceView: View {
+struct TipCalculationValues {
     
-    struct TipCalculationValues {
-        
-        var totalCost: Double
-        var tipPercentage: Int
-        
-        func calculateTipPercentageDivided() -> Double {
-            let tipPercentageDivided = Double(tipPercentage) / 100
-            return tipPercentageDivided
-        }
-        
-        func calculateTipAmount() -> Double {
-            let tipAmount = totalCost * calculateTipPercentageDivided()
-            return tipAmount
-        }
-        
-        func calculateTipAmountRounded() -> Double {
-            let roundedTipAmount = (calculateTipAmount() * 100).rounded() / 100
-            return roundedTipAmount
-        }
-        
-        func calculateTotalCostInclTipAmt() -> Double {
-            let totalCostInclTipAmt = totalCost + calculateTipAmount()
-            return totalCostInclTipAmt
-        }
-        
-        func calculateTotalAmtInclTipRounded() -> Double {
-            let roundedTotalCostInclTipAmt = (calculateTotalCostInclTipAmt() * 100).rounded() / 100
-            return roundedTotalCostInclTipAmt
-        }
-        
+    var totalCost: Double
+    var tipPercentage: Int
+    
+    func calculateTipPercentageDivided() -> Double {
+        let tipPercentageDivided = Double(tipPercentage) / 100
+        return tipPercentageDivided
     }
+    
+    func calculateTipAmount() -> Double {
+        let tipAmount = totalCost * calculateTipPercentageDivided()
+        return tipAmount
+    }
+    
+    func calculateTipAmountRounded() -> Double {
+        let roundedTipAmount = (calculateTipAmount() * 100).rounded() / 100
+        return roundedTipAmount
+    }
+    
+    func calculateTotalCostInclTipAmt() -> Double {
+        let totalCostInclTipAmt = totalCost + calculateTipAmount()
+        return totalCostInclTipAmt
+    }
+    
+    func calculateTotalAmtInclTipRounded() -> Double {
+        let roundedTotalCostInclTipAmt = (calculateTotalCostInclTipAmt() * 100).rounded() / 100
+        return roundedTotalCostInclTipAmt
+    }
+    
+}
+
+struct SimpleCalcTipChoiceView: View {
 
     
     var body: some View {
