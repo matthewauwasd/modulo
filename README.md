@@ -1,6 +1,8 @@
 # Modulo
 
-## A simpler tipping app!
+### A simpler tipping app!
+
+
 
 This app was designed to make tipping simpler, avoiding too much overthinking that could result in unfair tip amounts.
 
