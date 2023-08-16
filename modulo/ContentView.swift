@@ -20,7 +20,7 @@ extension UINavigationController: UIGestureRecognizerDelegate {
 
 struct ContentView: View {
     
-    @State private var correspondingValue: Int?
+    @StateObject private var viewModel = RatingViewModel()
     
     struct ButtonUIDetails: ButtonStyle {
         func makeBody(configuration: Configuration) -> some View {
@@ -36,55 +36,39 @@ struct ContentView: View {
     }
     
     var body: some View {
-        
-        NavigationStack {
-        
-            ZStack {
-                
-                Color(red: 0.0, green: 0.0, blue: 1.0, opacity: 1.0)
-                    .ignoresSafeArea()
-                
-                VStack {
-                    
-                    Spacer()
-                    
-                    Text("How was your service?")
-                        .font(.custom("DMSans-Bold", size: 30))
-                        .foregroundColor(.white)
-                        .frame(height: 150.0)
-                        
-                        VStack {
-                            
-                            Spacer()
-                            
-                            NavigationLink(destination: SimpleCalcTipChoiceView()) {
-                                                        Text("Great")
-                                                    }
-                            .buttonStyle(ButtonUIDetails())
-                            
-                            NavigationLink(destination: SimpleCalcTipChoiceView()) {
-                                                        Text("Average")
-                                                    }
-                            .buttonStyle(ButtonUIDetails())
-                            
-                            NavigationLink(destination: SimpleCalcTipChoiceView()) {
-                                                        Text("Bad")
-                                                    }
-                            .buttonStyle(ButtonUIDetails())
-                            
-                            Spacer()
-                            
+            NavigationView {
+                ZStack {
+                    Color(red: 0.0, green: 0.0, blue: 1.0, opacity: 1.0)
+                        .ignoresSafeArea()
+
+                    VStack {
+                        Spacer()
+
+                        Text("How was your service?")
+                            .font(.custom("DMSans-Bold", size: 30))
+                            .foregroundColor(.white)
+                            .frame(height: 150.0)
+
+                        NavigationLink(destination: SimpleCalcTipChoiceView(viewModel: RatingViewModel(selectedRating: 15))) {
+                            Text("Great")
+                        }
+                        .buttonStyle(ButtonUIDetails())
+
+                        NavigationLink(destination: SimpleCalcTipChoiceView(viewModel: RatingViewModel(selectedRating: 13))) {
+                            Text("Average")
+                        }
+                        .buttonStyle(ButtonUIDetails())
+
+                        NavigationLink(destination: SimpleCalcTipChoiceView(viewModel: RatingViewModel(selectedRating: 10))) {
+                            Text("Bad")
+                        }
+                        .buttonStyle(ButtonUIDetails())
+
+                        Spacer()
                     }
-                        
-                    
-                    Spacer()
-                    Spacer()
-                    
                 }
-                
             }
         }
-    }
         
 }
 
