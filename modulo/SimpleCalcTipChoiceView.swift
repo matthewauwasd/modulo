@@ -8,49 +8,62 @@
 import SwiftUI
 
 struct SimpleCalcTipChoiceView: View {
+    @StateObject private var viewModel = ValueViewModel()
 
-    @ObservedObject var viewModel: RatingViewModel
     @State private var mealCostInput = ""
     
     var body: some View {
         
-        let ratingCorrelatedAmt = viewModel.selectedRating ?? 0
+        NavigationView {
         
-        ZStack {
-            
-            Color(red: 0.0, green: 0.0, blue: 1.0, opacity: 1.0)
-                .ignoresSafeArea()
-            
-            VStack {
+            ZStack {
                 
-                Spacer()
+                Color(red: 0.0, green: 0.0, blue: 1.0, opacity: 1.0)
+                    .ignoresSafeArea()
                 
-                Text("What is the total cost of your meal?")
-                    .font(.custom("DMSans-Bold", size: 30))
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .frame(height: 150.0)
-                
-                Spacer()
-                Spacer()
-                
-                TextField("Enter amount", text: $mealCostInput )
+                VStack {
                     
-                    .keyboardType(.decimalPad)
-                    .frame(width: 300.0, height: 100.0)
-                    .font(.custom("DMSans-Bold", size: 30))
-                    .foregroundColor(.black)
-                    .background(.white)
-                    .multilineTextAlignment(.center)
-                    .cornerRadius(20)
-                
-                Spacer()
-                
-                Spacer()
+                    Spacer()
+                    
+                    Text("What is the total cost of your meal?")
+                        .font(.custom("DMSans-Bold", size: 30))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .frame(height: 150.0)
+                    
+                    Spacer()
+                    Spacer()
+                    
+                    TextField("Enter amount", text: $mealCostInput )
+                    
+                        .keyboardType(.decimalPad)
+                        .frame(width: 300.0, height: 95.0)
+                        .font(.custom("DMSans-Bold", size: 30))
+                        .foregroundColor(.black)
+                        .background(.white)
+                        .multilineTextAlignment(.center)
+                        .cornerRadius(20)
+                    
+                    Spacer()
+                    
+                    NavigationLink("Calculate Tip", destination: FinalResultView(viewModel: viewModel))
+                        .frame(width: 240.0, height: 90.0)
+                        .font(.custom("DMSans-Bold", size: 27))
+                        .foregroundColor(.blue)
+                        .background(.white)
+                        .multilineTextAlignment(.center)
+                        .cornerRadius(20)
+                    
+                    Spacer()
+                    
+                    Spacer()
+                    
+                    
+                    
+                    
+                }
                 
             }
-                        
-            
             
         }
         .navigationBarHidden(true)
@@ -62,8 +75,6 @@ struct SimpleCalcTipChoiceView: View {
 
 struct SimpleCalcTipChoiceView_Previews: PreviewProvider {
     static var previews: some View {
-        let dummyViewModel = RatingViewModel()
-
-        SimpleCalcTipChoiceView(viewModel: dummyViewModel)
+        SimpleCalcTipChoiceView()
     }
 }

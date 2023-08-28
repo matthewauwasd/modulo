@@ -20,7 +20,7 @@ extension UINavigationController: UIGestureRecognizerDelegate {
 
 struct ContentView: View {
     
-    @StateObject private var viewModel = RatingViewModel()
+    @StateObject private var viewModel = ValueViewModel()
     
     struct ButtonUIDetails: ButtonStyle {
         func makeBody(configuration: Configuration) -> some View {
@@ -49,19 +49,13 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .frame(height: 150.0)
 
-                        NavigationLink(destination: SimpleCalcTipChoiceView(viewModel: RatingViewModel(selectedRating: 15))) {
-                            Text("Great")
-                        }
+                        NavigationLink("Great", destination:SimpleCalcTipChoiceView())
                         .buttonStyle(ButtonUIDetails())
 
-                        NavigationLink(destination: SimpleCalcTipChoiceView(viewModel: RatingViewModel(selectedRating: 13))) {
-                            Text("Average")
-                        }
+                        NavigationLink("Average", destination:SimpleCalcTipChoiceView())
                         .buttonStyle(ButtonUIDetails())
 
-                        NavigationLink(destination: SimpleCalcTipChoiceView(viewModel: RatingViewModel(selectedRating: 10))) {
-                            Text("Bad")
-                        }
+                        NavigationLink("Bad", destination:SimpleCalcTipChoiceView())
                         .buttonStyle(ButtonUIDetails())
 
                         Spacer()

@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct FinalResultView: View {
+    
+    @ObservedObject var viewModel: ValueViewModel
+
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ZStack {
+            let ratingCorrelatedAmt = viewModel.selectedRating ?? 0
+            
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                
+        }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        
     }
+    
 }
+
+
 
 struct FinalResultView_Previews: PreviewProvider {
     static var previews: some View {
-        FinalResultView()
+        
+        let dummyViewModel = ValueViewModel()
+
+        
     }
 }
